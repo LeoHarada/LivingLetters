@@ -8,9 +8,6 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: "10mb" }));
 
-app.use(cors());
-app.use(express.json({ limit: "10mb" }));
-
 const PORT = process.env.PORT || 8080;
 
 //MongoDB Connection
@@ -46,7 +43,7 @@ app.get("/product", async (req, res) => {
 //Stripe Payments
 const stripe = new Stripe(process.env.REACT_APP_STRIPE_SECRET_KEY);
 
-app.post("/create-payment-intent", async (req, res) => {
+app.post("/create-checkout-session", async (req, res) => {
     try {
         const params = {
             submit_type: "pay",
@@ -83,4 +80,4 @@ app.post("/create-payment-intent", async (req, res) => {
     }
 });
 
-app.listen(8080, () => console.log("Node server listening on port 8080!"));
+app.listen(PORT, () => console.log("Node server listening on port : " + PORT));
