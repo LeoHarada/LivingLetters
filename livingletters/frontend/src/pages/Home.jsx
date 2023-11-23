@@ -9,7 +9,7 @@ const Home = () => {
     return (
         <div className="p-2 mt-7 md:p-4">
             <div className="">
-                <div className="flex gap-5 overflow-scroll scrollbar-none scroll-smooth transition-all">
+                <div className="flex gap-5">
                     {productData[0]
                         ? productData.map((product) => {
                               return (

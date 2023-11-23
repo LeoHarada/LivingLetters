@@ -1,6 +1,8 @@
 import "./App.css";
 import React, { useEffect } from "react";
+import Header from "./components/Header";
 import { Outlet } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { setDataProduct } from "./redux/productSlice";
 
@@ -19,8 +21,10 @@ function App() {
 
     return (
         <>
+            {/* <Toaster /> */}
             <div>
-                <main>
+                <Header />
+                <main className="pt-16 bg-slate-100 min-h-[calc(100vh)]">
                     <Outlet />
                 </main>
             </div>
