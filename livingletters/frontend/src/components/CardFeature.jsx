@@ -21,7 +21,10 @@ const CardFeature = ({ image, name, price, category, loading, id }) => {
                 <>
                     <div className="flex flex-col justify-center items-center">
                         <div className="flex flex-col justify-center items-center">
-                            <img src={image} className="h-full" />
+                            <img
+                                src={image}
+                                className="sm:max-w-[60%] max-w-[100%]"
+                            />
                         </div>
                         <h3 className="font-semibold text-slate-600 capitalize text-lg mt-4 whitespace-nowrap overflow-hidden">
                             {name}
@@ -32,7 +35,7 @@ const CardFeature = ({ image, name, price, category, loading, id }) => {
                         </p>
                     </div>
                     <button
-                        className="bg-red-500 text-white font-bold py-2 mt-3 px-2 flex items-center m-auto rounded hover:bg-white hover:text-red-500"
+                        className="bg-[darkolivegreen] text-white font-bold py-2 mt-3 px-2 flex items-center m-auto rounded hover:bg-white hover:text-[darkolivegreen]"
                         onClick={handleAddCartProduct}
                     >
                         Add to Cart

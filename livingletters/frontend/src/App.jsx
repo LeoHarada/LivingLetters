@@ -24,7 +24,7 @@ function App() {
             <Toaster />
             <div>
                 <Header />
-                <main className="pt-10 min-h-[calc(100vh)]">
+                <main className="min-h-[calc(100vh)]">
                     <Outlet />
                 </main>
             </div>

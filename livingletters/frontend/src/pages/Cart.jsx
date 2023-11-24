@@ -64,7 +64,7 @@ const Cart = () => {
 
                         {/* total cart items */}
                         <div className="w-full max-w-sm ml-auto">
-                            <h2 className="bg-blue-500 text-white p-2 text-lg font-bold">
+                            <h2 className="bg-[darkolivegreen] text-white p-2 text-lg font-bold">
                                 Summary
                             </h2>
                             <div className="flex w-full py-2 text-lg border-b">
@@ -81,7 +81,7 @@ const Cart = () => {
                                 </p>
                             </div>
                             <button
-                                className="bg-red-500 text-lg font-bold py-2 text-white rounded-md px-2 flex items-center m-auto mt-3"
+                                className="bg-[darkolivegreen] text-lg font-bold py-2 text-white rounded-md px-2 flex items-center m-auto mt-3 hover:bg-white hover:text-[darkolivegreen]"
                                 onClick={handlePayment}
                             >
                                 Payment
