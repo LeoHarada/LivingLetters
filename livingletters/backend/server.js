@@ -49,6 +49,9 @@ app.post("/create-checkout-session", async (req, res) => {
             submit_type: "pay",
             mode: "payment",
             billing_address_collection: "auto",
+            shipping_address_collection: {
+                allowed_countries: ["US"],
+            },
             shipping_options: [
                 { shipping_rate: "shr_1NsVPTBdnZ7zmfg4WKlwzmaH" },
             ],
