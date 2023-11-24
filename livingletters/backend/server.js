@@ -49,6 +49,9 @@ app.post("/create-checkout-session", async (req, res) => {
             submit_type: "pay",
             mode: "payment",
             billing_address_collection: "auto",
+            phone_number_collection: {
+                enabled: true,
+            },
             shipping_address_collection: {
                 allowed_countries: ["US"],
             },
