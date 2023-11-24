@@ -3,6 +3,8 @@ import CartProduct from "../components/CartProduct";
 import { useSelector } from "react-redux";
 import { toast } from "react-hot-toast";
 import { loadStripe } from "@stripe/stripe-js";
+import EmptyCart from "../assets/EmptyCard.png";
+import FromDulcie from "../assets/FromDulcie.png";
 
 const Cart = () => {
     const productCartItem = useSelector((state) => state.product.cartItem);
@@ -90,10 +92,9 @@ const Cart = () => {
                     </div>
                 ) : (
                     <>
-                        <div className="flex flex-col w-full justify-center items-center">
-                            <p className="text-slate-500 text-3xl font-bold mt-5">
-                                Cart is empty!
-                            </p>
+                        <div className="flex flex-col justify-center items-center mt-20">
+                            <img src={FromDulcie} />
+                            <img src={EmptyCart} className="mt-10" />
                         </div>
                     </>
                 )}
