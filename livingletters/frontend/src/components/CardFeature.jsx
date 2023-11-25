@@ -35,7 +35,7 @@ const CardFeature = ({ image, name, price, category, loading, id }) => {
                         </p>
                     </div>
                     <button
-                        className="bg-[darkolivegreen] text-white font-bold py-2 mt-3 px-2 flex items-center m-auto rounded hover:bg-white hover:text-[darkolivegreen]"
+                        className="text-[darkolivegreen] uppercase text-sm font-bold flex flex-col py-2 px-2 mt-3 m-auto items-center border-solid border rounded-sm border-[darkolivegreen] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
                         onClick={handleAddCartProduct}
                     >
                         Add to Cart
