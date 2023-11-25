@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { addCartItem } from "../redux/productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import LivingLettersCover from "../assets/LivingLettersCover.png";
@@ -6,6 +6,11 @@ import LivingLettersCover from "../assets/LivingLettersCover.png";
 const Product = () => {
     const productData = useSelector((state) => state.product.productList);
     const product = productData[0];
+    const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!isDropdownOpen);
+    };
 
     const dispatch = useDispatch();
 
@@ -40,14 +45,54 @@ const Product = () => {
                                       <span>{product.price}</span>
                                   </p>
                                   <button
-                                      className="text-[darkolivegreen] uppercase text-sm my-3 mx-[25%] font-bold flex flex-col py-4 items-center border-solid border rounded-sm border-[darkolivegreen] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
+                                      className="text-[darkolivegreen] uppercase text-sm my-3 mx-[25%] font-bold flex flex-col py-4 px-4 items-center border-solid border rounded-sm border-[darkolivegreen] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
                                       onClick={handleAddCartProduct}
                                   >
                                       Add to Cart • ${product.price}
                                   </button>
+                                  <hr className="bg-gray my-2"></hr>
                                   <div>
-                                      <button>Description</button>
-                                      <div>{product.description}</div>
+                                      <button
+                                          id="dropdownDefaultButton"
+                                          data-dropdown-toggle="dropdown"
+                                          className="w-full font-bold uppercase py-2.5 text-center inline-flex items-center justify-between"
+                                          type="button"
+                                          onClick={toggleDropdown}
+                                      >
+                                          Description
+                                          <svg
+                                              className={`w-2.5 h-2.5 ms-3 ${
+                                                  isDropdownOpen
+                                                      ? "-rotate-90"
+                                                      : ""
+                                              } transition-transform duration-500`}
+                                              aria-hidden="true"
+                                              xmlns="http://www.w3.org/2000/svg"
+                                              fill="none"
+                                              viewBox="0 0 10 6"
+                                          >
+                                              <path
+                                                  stroke="currentColor"
+                                                  strokeLinecap="round"
+                                                  strokeLinejoin="round"
+                                                  strokeWidth="2"
+                                                  d="m1 1 4 4 4-4"
+                                              />
+                                          </svg>
+                                      </button>
+
+                                      <div
+                                          id="dropdown"
+                                          className={`max-h-0 overflow-hidden transition-max-height duration-500 ease-in-out ${
+                                              isDropdownOpen ? "max-h-96" : ""
+                                          }`}
+                                      >
+                                          <div className="mb-10">
+                                              {product.description}
+                                          </div>
+                                      </div>
+
+                                      <hr className="my-2"></hr>
                                   </div>
                               </div>
                           </div>

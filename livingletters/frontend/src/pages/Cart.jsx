@@ -9,10 +9,10 @@ import FromDulcie from "../assets/FromDulcie.png";
 const Cart = () => {
     const productCartItem = useSelector((state) => state.product.cartItem);
 
-    const totalPrice = productCartItem.reduce(
-        (acc, curr) => acc + parseInt(curr.total),
-        0
-    );
+    const totalPrice = productCartItem
+        .reduce((acc, curr) => acc + parseFloat(curr.total), 0)
+        .toFixed(2);
+
     const totalQty = productCartItem.reduce(
         (acc, curr) => acc + parseInt(curr.qty),
         0
