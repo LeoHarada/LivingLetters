@@ -16,7 +16,6 @@ import Cart from "./pages/Cart";
 import Success from "./pages/Success";
 import Cancel from "./pages/Cancel";
 import Product from "./pages/Product";
-import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 const router = createBrowserRouter(
@@ -24,7 +23,6 @@ const router = createBrowserRouter(
         <Route path="/" element={<App />}>
             <Route index element={<Home />} />
             <Route path="product" element={<Product />} />
-            <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
             <Route path="cart" element={<Cart />} />
             <Route path="success" element={<Success />} />

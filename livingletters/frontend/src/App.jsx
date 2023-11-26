@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useEffect } from "react";
-import Header from "./components/Header";
+import NavBar from "./components/NavBar";
 import { Outlet } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import { useDispatch } from "react-redux";
@@ -23,7 +23,7 @@ function App() {
         <>
             <Toaster />
             <div>
-                <Header />
+                <NavBar />
                 <main className="min-h-[calc(100vh)]">
                     <Outlet />
                 </main>

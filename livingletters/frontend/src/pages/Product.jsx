@@ -31,7 +31,7 @@ const Product = () => {
                 _id: product._id,
                 name: product.name,
                 price: product.price,
-                category: product.category,
+                description: product.description,
                 image: LivingLettersCover,
             })
         );
@@ -46,7 +46,7 @@ const Product = () => {
                               className="flex flex-col sm:flex-row items-center sm:items-start mt-20 px-3 sm:px-[5%]"
                           >
                               <div
-                                  className="flex sm:flex-col gap-3 overflow-scroll scrollbar-none sm:overflow-hidden scroll-smooth transition-all px-[5%] sm:px-0 sm:w-[50px] sm:pt-[4.5%]"
+                                  className="flex sm:flex-col gap-3 overflow-scroll scrollbar-none sm:overflow-hidden scroll-smooth transition-all px-[10%] sm:px-0 sm:w-[50px] sm:pt-[4.5%]"
                                   ref={slideProductRef}
                               >
                                   <img
@@ -55,26 +55,31 @@ const Product = () => {
                                       onClick={() =>
                                           changePhotoHandler(LivingLettersCover)
                                       }
+                                      className="cursor-pointer"
                                   />
                                   <img
                                       id="2"
                                       src={Book1}
                                       onClick={() => changePhotoHandler(Book1)}
+                                      className="cursor-pointer"
                                   />
                                   <img
                                       id="3"
                                       src={Book2}
                                       onClick={() => changePhotoHandler(Book2)}
+                                      className="cursor-pointer"
                                   />
                                   <img
                                       id="4"
                                       src={Book3}
                                       onClick={() => changePhotoHandler(Book3)}
+                                      className="cursor-pointer"
                                   />
                                   <img
                                       id="5"
                                       src={Book4}
                                       onClick={() => changePhotoHandler(Book4)}
+                                      className="cursor-pointer"
                                   />
                               </div>
 

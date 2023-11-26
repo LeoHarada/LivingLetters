@@ -8,7 +8,7 @@ import {
     decreaseQty,
 } from "../redux/productSlice";
 
-const CartProduct = ({ id, name, image, category, qty, total, price }) => {
+const CartProduct = ({ id, name, image, description, qty, total, price }) => {
     const dispatch = useDispatch();
 
     return (
@@ -28,7 +28,7 @@ const CartProduct = ({ id, name, image, category, qty, total, price }) => {
                         <AiFillDelete />
                     </div>
                 </div>
-                <p className="text-slate-500 font-medium">{category}</p>
+                <p className="text-slate-500 font-medium">{description}</p>
                 <p className="font-bold text-base">
                     <span className="text-red-500">$</span>
                     <span>{price}</span>
