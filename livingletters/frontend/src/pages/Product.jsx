@@ -2,16 +2,25 @@ import React, { useState, useRef } from "react";
 import { addCartItem } from "../redux/productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import LivingLettersCover from "../assets/LivingLettersCover.png";
+import Book1 from "../assets/book1.jpg";
+import Book2 from "../assets/book2.jpg";
+import Book3 from "../assets/book3.jpg";
+import Book4 from "../assets/book4.jpg";
 
 const Product = () => {
     const productData = useSelector((state) => state.product.productList);
     const product = productData[0];
     const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const [mainPhoto, setMainPhoto] = useState(LivingLettersCover);
 
     const slideProductRef = useRef();
 
     const toggleDropdown = () => {
         setDropdownOpen(!isDropdownOpen);
+    };
+
+    const changePhotoHandler = (src) => {
+        setMainPhoto(src);
     };
 
     const dispatch = useDispatch();
@@ -34,22 +43,46 @@ const Product = () => {
                       return (
                           <div
                               key={product._id}
-                              className="flex flex-col sm:flex-row items-center sm:items-start mt-20 px-3 sm:px-[5%] lg:px-[10%]"
+                              className="flex flex-col sm:flex-row items-center sm:items-start mt-20 px-3 sm:px-[5%]"
                           >
                               <div
-                                  className="flex sm:flex-col gap-3 overflow-scroll scrollbar-none sm:overflow-hidden scroll-smooth transition-all px-[5%] sm:px-0 sm:w-[100px] sm:pt-[4.5%]"
+                                  className="flex sm:flex-col gap-3 overflow-scroll scrollbar-none sm:overflow-hidden scroll-smooth transition-all px-[5%] sm:px-0 sm:w-[50px] sm:pt-[4.5%]"
                                   ref={slideProductRef}
                               >
-                                  <img src={LivingLettersCover} />
-                                  <img src={LivingLettersCover} />
-                                  <img src={LivingLettersCover} />
-                                  <img src={LivingLettersCover} />
+                                  <img
+                                      id="1"
+                                      src={LivingLettersCover}
+                                      onClick={() =>
+                                          changePhotoHandler(LivingLettersCover)
+                                      }
+                                  />
+                                  <img
+                                      id="2"
+                                      src={Book1}
+                                      onClick={() => changePhotoHandler(Book1)}
+                                  />
+                                  <img
+                                      id="3"
+                                      src={Book2}
+                                      onClick={() => changePhotoHandler(Book2)}
+                                  />
+                                  <img
+                                      id="4"
+                                      src={Book3}
+                                      onClick={() => changePhotoHandler(Book3)}
+                                  />
+                                  <img
+                                      id="5"
+                                      src={Book4}
+                                      onClick={() => changePhotoHandler(Book4)}
+                                  />
                               </div>
 
                               <img
-                                  src={LivingLettersCover}
+                                  id="main-photo"
+                                  src={mainPhoto}
                                   alt="product image"
-                                  className="sm:w-[60%] sm:h-[100%] hidden sm:block sm:pl-2"
+                                  className="sm:w-[50%] sm:h-[100%] hidden sm:block sm:pl-2"
                               />
                               <div className="flex flex-col sm:pl-[3%] sm:min-w-[35%] pt-4 sm:pt-8 sm:w-[40%]">
                                   <h3 className="flex flex-wrap font-semibold text-slate-600 capitalize text-3xl lg:text-4xl">

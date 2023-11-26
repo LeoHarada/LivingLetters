@@ -21,10 +21,7 @@ const CardFeature = ({ image, name, price, category, loading, id }) => {
                 <>
                     <div className="flex flex-col justify-center items-center">
                         <div className="flex flex-col justify-center items-center">
-                            <img
-                                src={image}
-                                className="sm:max-w-[60%] max-w-[100%]"
-                            />
+                            <img src={image} className="max-w-[100%]" />
                         </div>
                         <h3 className="font-semibold text-slate-600 capitalize text-lg mt-4 whitespace-nowrap overflow-hidden">
                             {name}
