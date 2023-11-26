@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { addCartItem } from "../redux/productSlice";
 import { useDispatch, useSelector } from "react-redux";
 import LivingLettersCover from "../assets/LivingLettersCover.png";
@@ -7,6 +7,8 @@ const Product = () => {
     const productData = useSelector((state) => state.product.productList);
     const product = productData[0];
     const [isDropdownOpen, setDropdownOpen] = useState(false);
+
+    const slideProductRef = useRef();
 
     const toggleDropdown = () => {
         setDropdownOpen(!isDropdownOpen);
@@ -30,13 +32,26 @@ const Product = () => {
             {productData[0]
                 ? productData.map((product) => {
                       return (
-                          <div className="flex flex-col sm:flex-row items-center sm:items-start mt-20">
+                          <div
+                              key={product._id}
+                              className="flex flex-col sm:flex-row items-center sm:items-start mt-20 px-3 sm:px-[5%] lg:px-[10%]"
+                          >
+                              <div
+                                  className="flex sm:flex-col gap-3 overflow-scroll scrollbar-none sm:overflow-hidden scroll-smooth transition-all px-[5%] sm:px-0 sm:w-[100px] sm:pt-[4.5%]"
+                                  ref={slideProductRef}
+                              >
+                                  <img src={LivingLettersCover} />
+                                  <img src={LivingLettersCover} />
+                                  <img src={LivingLettersCover} />
+                                  <img src={LivingLettersCover} />
+                              </div>
+
                               <img
                                   src={LivingLettersCover}
                                   alt="product image"
-                                  className="sm:w-[60%] sm:h-[100%] sm:pl-[10%] sm:pr-[5%] px-5"
+                                  className="sm:w-[60%] sm:h-[100%] hidden sm:block sm:pl-2"
                               />
-                              <div className="flex flex-col sm:pl-4 px-8 pt-4 sm:pt-8 sm:w-[40%]">
+                              <div className="flex flex-col sm:pl-[3%] sm:min-w-[35%] pt-4 sm:pt-8 sm:w-[40%]">
                                   <h3 className="flex flex-wrap font-semibold text-slate-600 capitalize text-3xl lg:text-4xl">
                                       {product.name}
                                   </h3>
@@ -45,7 +60,7 @@ const Product = () => {
                                       <span>{product.price}</span>
                                   </p>
                                   <button
-                                      className="text-[darkolivegreen] uppercase text-sm my-3 mx-[25%] font-bold flex flex-col py-4 px-4 items-center border-solid border rounded-sm border-[darkolivegreen] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
+                                      className="text-[darkolivegreen] uppercase text-sm my-3 font-bold flex flex-col py-4 px-4 items-center border-solid border rounded-sm border-[darkolivegreen] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
                                       onClick={handleAddCartProduct}
                                   >
                                       Add to Cart • ${product.price}
