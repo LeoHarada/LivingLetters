@@ -5,8 +5,8 @@ import CancelledOrder from "../assets/CancelledOrder.png";
 const Cancel = () => {
     return (
         <div className="flex flex-col justify-center items-center mt-20">
-            <img src={FromDulcie} />
-            <img src={CancelledOrder} className="mt-10" />
+            <img src={FromDulcie} alt="from dulcie cancel" />
+            <img src={CancelledOrder} className="mt-10" alt="cancelled order" />
         </div>
     );
 };

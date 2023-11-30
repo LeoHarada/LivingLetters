@@ -92,8 +92,12 @@ const Cart = () => {
                 ) : (
                     <>
                         <div className="flex flex-col justify-center items-center mt-20">
-                            <img src={FromDulcie} />
-                            <img src={EmptyCart} className="mt-10" />
+                            <img src={FromDulcie} alt="from Dulcie message" />
+                            <img
+                                src={EmptyCart}
+                                className="mt-10"
+                                alt="empty cart"
+                            />
                         </div>
                     </>
                 )}
