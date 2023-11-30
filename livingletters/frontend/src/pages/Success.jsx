@@ -4,8 +4,7 @@ import SuccessfulOrder from "../assets/SuccessfulOrder.png";
 
 const Success = () => {
     return (
-        <div className="flex flex-col justify-center items-center mt-20">
-            <img src={FromDulcie} />
+        <div className="flex flex-col justify-center items-center">
             <img src={SuccessfulOrder} className="mt-10" />
         </div>
     );

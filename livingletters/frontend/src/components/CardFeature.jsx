@@ -38,15 +38,16 @@ const CardFeature = ({
                                 alt="card main"
                             />
                         </div>
+
                         <h3 className="font-semibold text-slate-600 capitalize text-lg mt-4 whitespace-nowrap overflow-hidden">
                             {name}
                         </h3>
-                        <p className="max-w-[85%] sm:max-w-[75%] lg:max-w-[50%] indent-8">
-                            {description}
-                        </p>
                         <p className="font-bold">
                             <span className="text-red-500">$</span>
                             <span>{price}</span>
+                        </p>
+                        <p className="max-w-[85%] sm:max-w-[75%] lg:max-w-[50%] indent-8">
+                            {description}
                         </p>
                     </div>
                     <button
