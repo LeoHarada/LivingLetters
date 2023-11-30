@@ -32,16 +32,16 @@ const Contact = () => {
 
     return (
         <div className="mt-10 relative">
-            <div className="absolute scale-x-[-1] top-[0%] left-[2%] w-[65%] h-[25%] sm:top-[-29%] sm:left-[26%] sm:w-[30%] sm:h-[50%] z-10">
+            <div className="absolute scale-x-[-1] top-[9%] left-[-37%] w-[65%] h-[25%] sm:top-[-12%] sm:left-[7%] sm:w-[30%] sm:h-[50%]">
                 <img
                     src={Butterfly}
-                    className="absolute top-[-85px] sm:top-[0] left-[0] w-full h-[139%] sm:h-full"
+                    className="absolute top-[-85px] sm:top-[0] left-[0] w-[25%] h-[55%] sm:w-[15%] sm:h-[30%]"
                 />
             </div>
             <form
                 ref={form}
                 onSubmit={sendEmail}
-                className="flex flex-col gap-8 px-[20%] sm:px-[35%] "
+                className="flex flex-col gap-8 px-[20%] sm:px-[35%]"
             >
                 <input
                     type="text"
