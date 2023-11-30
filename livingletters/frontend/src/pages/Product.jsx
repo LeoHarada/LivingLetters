@@ -33,6 +33,8 @@ const Product = () => {
                 price: product.price,
                 description: product.description,
                 image: LivingLettersCover,
+                detail1: product.detail1,
+                detail2: product.detail2,
             })
         );
     };
@@ -56,37 +58,42 @@ const Product = () => {
                                           changePhotoHandler(LivingLettersCover)
                                       }
                                       className="cursor-pointer"
+                                      alt="first on products page"
                                   />
                                   <img
                                       id="2"
                                       src={Book1}
                                       onClick={() => changePhotoHandler(Book1)}
                                       className="cursor-pointer"
+                                      alt="second on products page"
                                   />
                                   <img
                                       id="3"
                                       src={Book2}
                                       onClick={() => changePhotoHandler(Book2)}
                                       className="cursor-pointer"
+                                      alt="third on products page"
                                   />
                                   <img
                                       id="4"
                                       src={Book3}
                                       onClick={() => changePhotoHandler(Book3)}
                                       className="cursor-pointer"
+                                      alt="fourth on products page"
                                   />
                                   <img
                                       id="5"
                                       src={Book4}
                                       onClick={() => changePhotoHandler(Book4)}
                                       className="cursor-pointer"
+                                      alt="fifth on products page"
                                   />
                               </div>
 
                               <img
                                   id="main-photo"
                                   src={mainPhoto}
-                                  alt="product image"
+                                  alt="main product"
                                   className="sm:w-[50%] sm:h-[100%] hidden sm:block sm:pl-2"
                               />
                               <div className="flex flex-col sm:pl-[3%] sm:min-w-[35%] pt-4 sm:pt-8 sm:w-[40%]">
@@ -140,8 +147,18 @@ const Product = () => {
                                               isDropdownOpen ? "max-h-96" : ""
                                           }`}
                                       >
-                                          <div className="mb-10">
+                                          <div className="mb-10 whitespace-pre-line">
                                               {product.description}
+
+                                              <div className="">
+                                                  <br></br>
+                                                  <p className="">
+                                                      {product.detail1}
+                                                  </p>
+                                                  <p className="">
+                                                      {product.detail2}
+                                                  </p>
+                                              </div>
                                           </div>
                                       </div>
 

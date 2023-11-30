@@ -20,10 +20,11 @@ mongoose
 //Schemas
 const productSchema = mongoose.Schema({
     name: String,
-    category: String,
     image: String,
     price: String,
     description: String,
+    detail1: String,
+    detail2: String,
 });
 
 //Models

@@ -2,7 +2,16 @@ import React from "react";
 import { addCartItem } from "../redux/productSlice";
 import { useDispatch } from "react-redux";
 
-const CardFeature = ({ image, name, price, category, loading, id }) => {
+const CardFeature = ({
+    image,
+    name,
+    price,
+    description,
+    detail1,
+    detail2,
+    loading,
+    id,
+}) => {
     const dispatch = useDispatch();
     const handleAddCartProduct = (e) => {
         dispatch(
@@ -10,8 +19,10 @@ const CardFeature = ({ image, name, price, category, loading, id }) => {
                 _id: id,
                 name: name,
                 price: price,
-                category: category,
                 image: image,
+                description: description,
+                detail1: detail1,
+                detail2: detail2,
             })
         );
     };
@@ -21,11 +32,18 @@ const CardFeature = ({ image, name, price, category, loading, id }) => {
                 <>
                     <div className="flex flex-col justify-center items-center">
                         <div className="flex flex-col justify-center items-center">
-                            <img src={image} className="max-w-[100%]" />
+                            <img
+                                src={image}
+                                className="max-w-[100%]"
+                                alt="card main"
+                            />
                         </div>
                         <h3 className="font-semibold text-slate-600 capitalize text-lg mt-4 whitespace-nowrap overflow-hidden">
                             {name}
                         </h3>
+                        <p className="max-w-[85%] sm:max-w-[75%] lg:max-w-[50%] indent-8">
+                            {description}
+                        </p>
                         <p className="font-bold">
                             <span className="text-red-500">$</span>
                             <span>{price}</span>

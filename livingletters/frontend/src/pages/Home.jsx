@@ -28,7 +28,9 @@ const Home = () => {
                                   key={product._id + "homeproducts"}
                                   id={product._id}
                                   name={product.name}
-                                  category={product.category}
+                                  description={product.description}
+                                  detail1={product.detail1}
+                                  detail2={product.detail2}
                                   price={product.price}
                                   image={LivingLettersCover}
                               />

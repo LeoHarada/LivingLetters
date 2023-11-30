@@ -8,13 +8,27 @@ import {
     decreaseQty,
 } from "../redux/productSlice";
 
-const CartProduct = ({ id, name, image, description, qty, total, price }) => {
+const CartProduct = ({
+    id,
+    name,
+    image,
+    description,
+    detail1,
+    detail2,
+    qty,
+    total,
+    price,
+}) => {
     const dispatch = useDispatch();
 
     return (
         <div className="bg-slate-200 p-2 flex gap-4 rounded border border-slate-300">
             <div className="p-3 bg-white rounded overflow-hidden">
-                <img src={image} className="h-28 w-40 object-cover p-3" />
+                <img
+                    src={image}
+                    className="h-28 w-40 object-cover p-3"
+                    alt="products main"
+                />
             </div>
             <div className="flex flex-col gap-1 w-full">
                 <div className="flex justify-between">
@@ -29,6 +43,8 @@ const CartProduct = ({ id, name, image, description, qty, total, price }) => {
                     </div>
                 </div>
                 <p className="text-slate-500 font-medium">{description}</p>
+                <p className="text-slate-500 font-medium">{detail1}</p>
+                <p className="text-slate-500 font-medium">{detail2}</p>
                 <p className="font-bold text-base">
                     <span className="text-red-500">$</span>
                     <span>{price}</span>
