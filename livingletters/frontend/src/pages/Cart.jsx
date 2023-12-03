@@ -41,9 +41,6 @@ const Cart = () => {
     return (
         <>
             <div className="p-2 md:p-4">
-                <h2 className="text-lg md:-text-2xl font-bold text-slate-600 mt-5">
-                    Your Cart Items
-                </h2>
                 {productCartItem[0] ? (
                     <div className="my-4 flex gap-3 flex-col md:flex-row justify-center">
                         <div className="w-full max-w-3xl ">
@@ -64,28 +61,24 @@ const Cart = () => {
                         </div>
 
                         {/* total cart items */}
-                        <div className="w-full max-w-sm ml-auto">
-                            <h2 className="bg-[darkolivegreen] text-white p-2 text-lg font-bold">
-                                Summary
-                            </h2>
-                            <div className="flex w-full py-2 text-lg border-b">
-                                <p>Total Quantity :</p>
-                                <p className="ml-auto w-32 font-bold">
-                                    {totalQty}
-                                </p>
+                        <div className="w-full max-w-sm ml-auto text-[#4C4848] font-bold">
+                            <h2 className="text-lg">Summary</h2>
+                            <div className="flex w-full py-2 text-lg">
+                                <p>Total Quantity:</p>
+                                <p className="ml-auto w-32">{totalQty}</p>
                             </div>
-                            <div className="flex w-full py-2 text-lg border-b">
-                                <p>Total Price</p>
-                                <p className="ml-auto w-32 font-bold">
-                                    <span className="text-red-500">$</span>
+                            <div className="flex w-full py-2 text-lg">
+                                <p>Total Price:</p>
+                                <p className="ml-auto w-32">
+                                    <span>$</span>
                                     {totalPrice}
                                 </p>
                             </div>
                             <button
-                                className="text-[darkolivegreen] uppercase text-sm font-bold flex flex-col py-2 px-2 mt-3 m-auto items-center border-solid border rounded-sm border-[darkolivegreen] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
+                                className="uppercase text-lg font-bold flex flex-col py-4 px-8 mt-3 m-auto items-center border-solid border rounded-lg border-[#4C4848] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
                                 onClick={handlePayment}
                             >
-                                Payment
+                                Checkout
                             </button>
                         </div>
                     </div>

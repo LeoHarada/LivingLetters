@@ -39,19 +39,16 @@ const CardFeature = ({
                             />
                         </div>
 
-                        <h3 className="font-semibold text-slate-600 capitalize text-lg mt-4 whitespace-nowrap overflow-hidden">
+                        <h3 className="font-semibold text-[#4C4848] capitalize text-lg mt-4 whitespace-nowrap overflow-hidden">
                             {name}
                         </h3>
-                        <p className="font-bold">
-                            <span className="text-red-500">$</span>
+                        <p className="font-bold text-[#4C4848]">
+                            <span>$</span>
                             <span>{price}</span>
-                        </p>
-                        <p className="max-w-[85%] sm:max-w-[75%] lg:max-w-[50%] indent-8">
-                            {description}
                         </p>
                     </div>
                     <button
-                        className="text-[darkolivegreen] uppercase text-sm font-bold flex flex-col py-2 px-2 mt-3 m-auto items-center border-solid border rounded-sm border-[darkolivegreen] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
+                        className="text-[#4C4848] uppercase text-lg font-bold flex flex-col py-4 px-8 mt-3 m-auto items-center border-solid border rounded-lg border-[#4C4848] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
                         onClick={handleAddCartProduct}
                     >
                         Add to Cart

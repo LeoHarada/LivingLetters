@@ -47,7 +47,7 @@ const NavBar = () => {
                     }`}
                 >
                     <div className="sm:flex-grow">
-                        <nav className="gap-20 font-bold flex justify-center sm:flex-row-reverse flex-col-reverse items-center">
+                        <nav className="text-[#4C4848] gap-20 font-bold flex justify-center sm:flex-row-reverse flex-col-reverse items-center">
                             <Link
                                 className="hover:text-red-500 block lg:inline-block text-white-200"
                                 to={"contact"}

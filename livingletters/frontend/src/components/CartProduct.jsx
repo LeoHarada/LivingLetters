@@ -22,53 +22,49 @@ const CartProduct = ({
     const dispatch = useDispatch();
 
     return (
-        <div className="bg-[darkolivegreen] p-2 flex flex-col sm:flex-row items-center sm:items-start gap-4 rounded border border-slate-300">
+        <div className="p-10 flex flex-col sm:flex-row items-center sm:items-start gap-4 rounded-2xl border border-[#4C4848]">
             <div className="rounded overflow-hidden">
-                <img
-                    src={image}
-                    className="h-28 w-40 object-cover"
-                    alt="products main"
-                />
+                <img src={image} className="w-[30rem]" alt="products main" />
             </div>
             <div className="flex flex-col gap-1 w-full">
                 <div className="flex justify-between">
-                    <h3 className="font-semibold text-white capitalize text-lg md:text-xl">
+                    <h3 className="font-semibold text-[#4C4848] capitalize text-lg md:text-xl">
                         {name}
                     </h3>
                     <div
-                        className="cursor-pointer text-white hover:text-red-500"
+                        className="cursor-pointer text-[#4C4848] hover:text-red-500"
                         onClick={() => dispatch(deleteCartItem(id))}
                     >
                         <AiFillDelete />
                     </div>
                 </div>
-                <p className="text-white font-medium">{description}</p>
-                <p className="text-white font-medium">{detail1}</p>
-                <p className="text-white font-medium">{detail2}</p>
-                <p className="font-bold text-white">
-                    <span className="text-red-500">$</span>
+                <p className="text-[#4C4848] font-semibold mt-2">
+                    {description}
+                </p>
+                <p className="font-bold text-[#4C4848] mt-4 text-xl">
+                    <span>$</span>
                     <span>{price}</span>
                 </p>
-                <div className="flex justify-between">
-                    <div className="flex gap-3 items-center">
+                <div className="flex justify-between mt-1">
+                    <div className="flex gap-1 items-center">
                         <button
                             onClick={() => dispatch(increaseQty(id))}
-                            className="bg-white py-1 mt-2 rounded hover:bg-slate-400 p-1"
+                            className="hover:bg-slate-400 p-[.15rem] border-solid border rounded-md border-[#4C4848] text-[#4C4848]"
                         >
                             <TbPlus />
                         </button>
-                        <p className="font-semibold p-1 text-white">{qty}</p>
+                        <p className="font-semibold text-[#4C4848]">{qty}</p>
                         <button
                             onClick={() => dispatch(decreaseQty(id))}
-                            className="bg-white py-1 mt-2 rounded hover:bg-slate-400 p-1"
+                            className="hover:bg-slate-400 p-[.15rem] border-solid border rounded-md border-[#4C4848] text-[#4C4848]"
                         >
                             <TbMinus />
                         </button>
                     </div>
-                    <div className="flex items-center gap-2 font-bold text-white">
+                    <div className="flex items-center gap-2 font-bold text-[#4C4848] text-xl">
                         <p>Total :</p>
                         <p>
-                            <span className="text-red-500">$</span>
+                            <span>$</span>
                             {total}
                         </p>
                     </div>
