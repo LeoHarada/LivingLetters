@@ -75,7 +75,7 @@ const Cart = () => {
                                 </p>
                             </div>
                             <button
-                                className="uppercase text-lg font-bold flex flex-col py-4 px-12 mt-3 m-auto items-center border-solid border rounded-lg border-[#4C4848] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
+                                className="uppercase text-lg font-bold flex flex-col py-4 px-12 mt-3 m-auto items-center border-solid border rounded-lg border-[#4C4848] transition hover:bg-[#e8917f5e] duration-700 ease-in-out"
                                 onClick={handlePayment}
                             >
                                 Checkout

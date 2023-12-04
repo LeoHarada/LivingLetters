@@ -1,6 +1,7 @@
 import React from "react";
 import { addCartItem } from "../redux/productSlice";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const CardFeature = ({
     image,
@@ -12,6 +13,10 @@ const CardFeature = ({
     loading,
     id,
 }) => {
+    const navigate = useNavigate();
+    const toProduct = () => {
+        navigate("/product");
+    };
     const dispatch = useDispatch();
     const handleAddCartProduct = (e) => {
         dispatch(
@@ -34,8 +39,9 @@ const CardFeature = ({
                         <div className="flex flex-col justify-center items-center">
                             <img
                                 src={image}
-                                className="max-w-[100%]"
+                                className="max-w-[100%] cursor-pointer"
                                 alt="card main"
+                                onClick={toProduct}
                             />
                         </div>
 
@@ -48,7 +54,7 @@ const CardFeature = ({
                         </p>
                     </div>
                     <button
-                        className="text-[#4C4848] uppercase text-lg font-bold flex flex-col py-4 px-8 mt-3 m-auto items-center border-solid border rounded-lg border-[#4C4848] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
+                        className="text-[#4C4848] uppercase text-lg font-bold flex flex-col py-4 px-8 mt-3 m-auto items-center border-solid border rounded-lg border-[#4C4848] transition  hover:bg-[#e8917f5e] duration-700 ease-in-out"
                         onClick={handleAddCartProduct}
                     >
                         Add to Cart

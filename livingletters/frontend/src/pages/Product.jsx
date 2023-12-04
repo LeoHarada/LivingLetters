@@ -97,15 +97,15 @@ const Product = () => {
                                   className="sm:w-[50%] sm:h-[100%] hidden sm:block sm:pl-2"
                               />
                               <div className="flex flex-col sm:pl-[3%] sm:min-w-[35%] pt-4 sm:pt-8 sm:w-[40%]">
-                                  <h3 className="flex flex-wrap font-semibold text-slate-600 capitalize text-3xl lg:text-4xl">
+                                  <h3 className="flex flex-wrap font-semibold text-[#4C4848] capitalize text-3xl lg:text-4xl">
                                       {product.name}
                                   </h3>
-                                  <p className="font-bold flex flex-row">
-                                      <span className="text-red-500">$</span>
+                                  <p className="font-bold flex flex-row text-[#4C4848]">
+                                      <span>$</span>
                                       <span>{product.price}</span>
                                   </p>
                                   <button
-                                      className="text-[darkolivegreen] uppercase text-sm my-3 font-bold flex flex-col py-4 px-4 items-center border-solid border rounded-sm border-[darkolivegreen] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
+                                      className="text-[#4C4848] uppercase text-sm my-3 font-bold flex flex-col py-4 px-4 items-center border-solid border rounded-lg border-[#4C4848] transition hover:bg-[#e8917f5e] duration-700 ease-in-out"
                                       onClick={handleAddCartProduct}
                                   >
                                       Add to Cart • ${product.price}
@@ -115,7 +115,7 @@ const Product = () => {
                                       <button
                                           id="dropdownDefaultButton"
                                           data-dropdown-toggle="dropdown"
-                                          className="w-full font-bold uppercase py-2.5 text-center inline-flex items-center justify-between"
+                                          className="w-full font-bold uppercase py-2.5 text-center inline-flex items-center justify-between text-[#4C4848]"
                                           type="button"
                                           onClick={toggleDropdown}
                                       >
@@ -147,7 +147,7 @@ const Product = () => {
                                               isDropdownOpen ? "max-h-96" : ""
                                           }`}
                                       >
-                                          <div className="mb-10 whitespace-pre-line">
+                                          <div className="mb-10 whitespace-pre-line text-[#4C4848]">
                                               {product.description}
 
                                               <div className="">

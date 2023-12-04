@@ -17,7 +17,7 @@ const NavBar = () => {
                 <div className="block sm:hidden mt-2.5">
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="flex items-center py-2 rounded text-[#174a13c9]"
+                        className="flex items-center py-2 rounded text-[#4C4848]"
                     >
                         <svg
                             className={`fill-current h-8 w-8 z-50 ${
@@ -42,28 +42,28 @@ const NavBar = () => {
                 <div
                     className={`w-full block flex-grow sm:flex sm:items-center sm:w-auto ${
                         isOpen
-                            ? "block bg-[#174a13c9] top-0 left-0 h-[100vh] w-full z-10 text-white pt-[50%] fixed text-2xl"
+                            ? "block bg-[#e8917f5e] top-0 left-0 h-[100vh] w-full z-10 text-white pt-[50%] fixed text-2xl"
                             : "hidden"
                     }`}
                 >
                     <div className="sm:flex-grow">
-                        <nav className="text-[#4C4848] gap-20 font-bold flex justify-center sm:flex-row-reverse flex-col-reverse items-center">
+                        <nav className="text-white sm:text-[#4C4848] gap-20 font-bold flex justify-center sm:flex-row-reverse flex-col-reverse items-center">
                             <Link
-                                className="hover:text-red-500 block lg:inline-block text-white-200"
+                                className="hover:text-[#e8917f5e] block lg:inline-block text-white-200"
                                 to={"contact"}
                                 onClick={closeNavbar}
                             >
                                 Contact
                             </Link>
                             <Link
-                                className="hover:text-red-500 block lg:inline-block text-white-200"
+                                className="hover:text-[#e8917f5e] block lg:inline-block text-white-200"
                                 to={"product"}
                                 onClick={closeNavbar}
                             >
                                 Product
                             </Link>
                             <Link
-                                className="hover:text-red-500 block lg:inline-block text-white-200"
+                                className="hover:text-[#e8917f5e] block lg:inline-block text-white-200"
                                 to={""}
                                 onClick={closeNavbar}
                             >
@@ -73,7 +73,7 @@ const NavBar = () => {
                     </div>
                 </div>
             </nav>
-            <div className="text-[2rem] top-6 text-[#174a13c9] fixed right-5 hover:text-red-500">
+            <div className="text-[2rem] top-6 text-[#4C4848] fixed right-5 hover:text-[#e8917f5e]">
                 <Link to={"/cart"}>
                     <BsCartFill />
                     <div className="absolute -top-1 -right-1 text-white bg-red-500 h-4 w-4 rounded-full m-0 p-0 text-sm text-center">
