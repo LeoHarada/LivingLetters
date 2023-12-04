@@ -22,7 +22,7 @@ const CartProduct = ({
     const dispatch = useDispatch();
 
     return (
-        <div className="p-10 flex flex-col sm:flex-row items-center sm:items-start gap-4 rounded-2xl border border-[#4C4848]">
+        <div className="p-4 sm:p-10 flex flex-col sm:flex-row items-center sm:items-start gap-8 rounded-2xl border border-[#4C4848]">
             <div className="rounded overflow-hidden">
                 <img src={image} className="w-[30rem]" alt="products main" />
             </div>

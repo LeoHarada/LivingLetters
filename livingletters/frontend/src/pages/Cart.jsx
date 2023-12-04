@@ -42,8 +42,8 @@ const Cart = () => {
         <>
             <div className="p-2 md:p-4">
                 {productCartItem[0] ? (
-                    <div className="my-4 flex gap-3 flex-col md:flex-row justify-center">
-                        <div className="w-full max-w-3xl ">
+                    <div className="my-4 flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start">
+                        <div className="lg:max-w-[60%] ">
                             {productCartItem.map((product) => {
                                 return (
                                     <CartProduct
@@ -61,7 +61,7 @@ const Cart = () => {
                         </div>
 
                         {/* total cart items */}
-                        <div className="w-full max-w-sm ml-auto text-[#4C4848] font-bold">
+                        <div className="w-full max-w-sm text-[#4C4848] font-bold mt-4 lg:mt-0 lg:ml-12">
                             <h2 className="text-lg">Summary</h2>
                             <div className="flex w-full py-2 text-lg">
                                 <p>Total Quantity:</p>
@@ -75,7 +75,7 @@ const Cart = () => {
                                 </p>
                             </div>
                             <button
-                                className="uppercase text-lg font-bold flex flex-col py-4 px-8 mt-3 m-auto items-center border-solid border rounded-lg border-[#4C4848] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
+                                className="uppercase text-lg font-bold flex flex-col py-4 px-12 mt-3 m-auto items-center border-solid border rounded-lg border-[#4C4848] transition hover:bg-[#7c8d5f47] duration-700 ease-in-out"
                                 onClick={handlePayment}
                             >
                                 Checkout
