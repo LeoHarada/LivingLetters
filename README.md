@@ -9,7 +9,7 @@
 </p>
 
 ## :fire:	Overview
-The client is a freelance Artist, creating short animations for music artists and small businesses. As her business is growing, she's coming out with her first coloring book requested by many of her fans. She's expecting more demand in the future... hoping to add more products to her page of creations.
+Client is a freelance Artist, creating short animations for music artists and small businesses. As her business is growing, she's coming out with her first coloring book requested by many of her fans. She's expecting more demand in the future... hoping to add more products to her page of creations.
 
 ## :computer: Technologies
 ### Front-end:
