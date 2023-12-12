@@ -56,9 +56,9 @@ app.post("/create-checkout-session", async (req, res) => {
             shipping_address_collection: {
                 allowed_countries: ["US"],
             },
-            // shipping_options: [
-            //     { shipping_rate: "shr_1NsVPTBdnZ7zmfg4WKlwzmaH" },
-            // ],
+            shipping_options: [
+                { shipping_rate: "shr_1OMO3BLlF2PSQcr7RaZYxQmi" },
+            ],
             line_items: req.body.map((product) => {
                 return {
                     price_data: {
