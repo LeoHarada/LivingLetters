@@ -1,11 +1,9 @@
 import React, { useState, useRef } from "react";
 import { addCartItem } from "../redux/productSlice";
 import { useDispatch, useSelector } from "react-redux";
-import LivingLettersCover from "../assets/LivingLettersCover.png";
-import Book1 from "../assets/book1.jpg";
-import Book2 from "../assets/book2.jpg";
-import Book3 from "../assets/book3.jpg";
-import Book4 from "../assets/book4.jpg";
+import LivingLettersCover from "../assets/MainProductCover.jpg";
+import Book1 from "../assets/InteriorCoverPhoto.jpg";
+import Book2 from "../assets/BackCoverPhoto.jpg";
 
 const Product = () => {
     const productData = useSelector((state) => state.product.productList);
@@ -45,7 +43,7 @@ const Product = () => {
                       return (
                           <div
                               key={product._id}
-                              className="flex flex-col sm:flex-row items-center sm:items-start mt-20 px-3 sm:px-[5%]"
+                              className="flex flex-col sm:flex-row items-center sm:items-start mt-20 px-3 sm:px-[5%] pb-[10%]"
                           >
                               <div
                                   className="flex sm:flex-col gap-3 overflow-scroll scrollbar-none sm:overflow-hidden scroll-smooth transition-all px-[10%] sm:px-0 sm:w-[50px] sm:pt-[4.5%]"
@@ -72,21 +70,7 @@ const Product = () => {
                                       src={Book2}
                                       onClick={() => changePhotoHandler(Book2)}
                                       className="cursor-pointer"
-                                      alt="third on products page"
-                                  />
-                                  <img
-                                      id="4"
-                                      src={Book3}
-                                      onClick={() => changePhotoHandler(Book3)}
-                                      className="cursor-pointer"
-                                      alt="fourth on products page"
-                                  />
-                                  <img
-                                      id="5"
-                                      src={Book4}
-                                      onClick={() => changePhotoHandler(Book4)}
-                                      className="cursor-pointer"
-                                      alt="fifth on products page"
+                                      alt="second on products page"
                                   />
                               </div>
 
